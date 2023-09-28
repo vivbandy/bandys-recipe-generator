@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Ingredient Recipe Generator</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col s12 m8 offset-m2">
+                <h4 class="center-align">Create a 3 ingredient recipe</h4>
+                <div class="card">
+                    <div class="card-content">
+                        <form action="/" method="post">
+                            <div class="input-field">
+                                <input type="text" id="ingredient1" name="ingredient1" required>
+                                <label for="ingredient1">Ingredient 1</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="ingredient2" name="ingredient2" required>
+                                <label for="ingredient2">Ingredient 2</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="ingredient3" name="ingredient3" required>
+                                <label for="ingredient3">Ingredient 3</label>
+                            </div>
+                            <button type="submit" class="btn waves-effect waves-light blue">Generate Recipe</button>
+                        </form>
+                        <div style="margin-top: 20px;">
+                            <textarea class="materialize-textarea" readonly>{{ recipe }}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="location.reload();" class="btn waves-effect waves-light red">Clear</button>
+            </div>
+        </div>
+    </div>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
